@@ -1,0 +1,5 @@
+type Todo @model @auth(rules: [{ allow: custom }]) {
+	id: ID!
+	name: String!
+	description: String
+}

@@ -1,0 +1,28 @@
+{
+  "function": {
+    "graphQlLambdaAuthorizer6761ad03": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "api": {
+    "nextauth": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AWS_LAMBDA",
+            "lambdaAuthorizerConfig": {
+              "lambdaFunction": "graphQlLambdaAuthorizer6761ad03",
+              "ttlSeconds": "300"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  }
+}

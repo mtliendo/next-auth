@@ -1,13 +1,20 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { withSSRContext } from 'aws-amplify'
+import { listTodos } from '../../src/graphql/queries'
 
-type Data = {
-  name: string
-}
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
+export default async function handler(
+	request: NextApiRequest,
+	response: NextApiResponse
 ) {
-  res.status(200).json({ name: 'John Doe' })
+	const { API } = withSSRContext({ req: request })
+	const data = await API.graphql({
+		query: listTodos,
+		authMode: 'AWS_LAMBDA',
+		authToken: request.cookies['next-auth.session-token'],
+	})
+
+	//main.fdsrrw.amplifyapp.com --> mySite.com
+	//apiId.fdsaf.com/graphql --> api.mySite.com
+	// do stuff with data
+	response.status(200).json(data)
 }

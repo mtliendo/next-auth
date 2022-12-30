@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "nextauth",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}

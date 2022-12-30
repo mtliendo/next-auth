@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "nextauth",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AWS_LAMBDA",
+      "lambdaFunction": "graphQlLambdaAuthorizer6761ad03",
+      "ttlSeconds": "300"
+    }
+  }
+}

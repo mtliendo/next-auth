@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextauth-dev-101319-authRole",
+      "UnauthRoleArn": "arn:aws:iam::311853295989:role/amplify-nextauth-dev-101319-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::311853295989:role/amplify-nextauth-dev-101319-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nextauth-dev-101319-deployment",
+      "UnauthRoleName": "amplify-nextauth-dev-101319-unauthRole",
+      "StackName": "amplify-nextauth-dev-101319",
+      "StackId": "arn:aws:cloudformation:us-east-1:311853295989:stack/amplify-nextauth-dev-101319/9090a950-78a5-11ed-ad0b-0e88379e0563",
+      "AmplifyAppId": "d2unv17ycvfrkm"
+    },
+    "categories": {
+      "function": {
+        "graphQlLambdaAuthorizer6761ad03": {
+          "deploymentBucketName": "amplify-nextauth-dev-101319-deployment",
+          "s3Key": "amplify-builds/graphQlLambdaAuthorizer6761ad03-5239316a35366f786132-build.zip",
+          "secretsPathAmplifyAppId": "d2unv17ycvfrkm"
+        }
+      },
+      "api": {
+        "nextauth": {}
+      }
+    }
+  }
+}

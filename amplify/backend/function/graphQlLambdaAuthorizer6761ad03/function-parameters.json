@@ -1,0 +1,6 @@
+{
+  "lambdaLayers": [],
+  "secretNames": [
+    "NEXTAUTH_SECRET"
+  ]
+}
